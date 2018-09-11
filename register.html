@@ -81,14 +81,24 @@
       </div>
       <div class="form-group">
         <label for="inputPassword" class="control-label">Password</label>
-        <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
-        <div class="help-block">Minimum of 6 characters</div>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+        <div class="help-block">We suggest your password should have minimum of 6 characters.</div>
       </div>
       <div class="form-group -sm-6">
         <label for="ConfirmPassword">Re-enter Password</label>
-        <input type="password" class="form-control" id="inputPasswordConfirm" data-match="inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+        <input type="password" class="form-control" id="inputPasswordConfirm"  placeholder="Confirm" oninput="check(this)" required>
         <div class="help-block with-errors"></div>
       </div>
+      <script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('inputPassword').value) {
+            input.setCustomValidity("Whoops, these don't match");
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
