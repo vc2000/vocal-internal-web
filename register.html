@@ -61,7 +61,8 @@
 
 
   <div class="container">
-    <h2>Register</h2>
+    <h1>Register</h1>
+    <br>
     <form action="signup.php" data-toggle="validator" role="form" method="POST">
       <div class="form-row">
         <div class="col">
@@ -74,46 +75,57 @@
             <input type="text" class="form-control" placeholder="Last name" required>
         </div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div class="form-row">
+            <div class="col">
+              <label for="lname">Phone number</label>
+              <input type="text" class="form-control" placeholder="Phone" required>
           </div>
-          <div class="form-group">
-            <label for="inputPassword" class="control-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-            <div class="help-block">We suggest your password should have minimum of 6 characters.</div>
-          </div>
-          <div class="form-group -sm-6">
-            <label for="ConfirmPassword">Re-enter Password</label>
-            <input type="password" class="form-control" id="inputPasswordConfirm"  placeholder="Confirm" oninput="check(this)" required>
-            <div class="help-block with-errors"></div>
-          </div>
-          <script language='javascript' type='text/javascript'>
-            function check(input) {
-              if (input.value != document.getElementById('inputPassword').value) {
-                input.setCustomValidity("Whoops, these don't match. Please make some change!");
-              } else {
-                // input is valid -- reset the error message
-                input.setCustomValidity('');
+              <div class="col">
+                <label for="exampleFormControlSelect2">Job Titles</label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option value="1">Data Scientist</option>
+        <option value="2">Software Engineer</option>
+        <option value="3">Sales Associate</option>
+        <option value="4">Project Manager</option>
+        <option value="5">Public Relations</option>
+      </select>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="control-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+              <div class="help-block">We suggest your password should have minimum of 6 characters.</div>
+            </div>
+            <div class="form-group -sm-6">
+              <label for="ConfirmPassword">Re-enter Password</label>
+              <input type="password" class="form-control" id="inputPasswordConfirm"  placeholder="Confirm" oninput="check(this)" required>
+              <div class="help-block with-errors"></div>
+            </div>
+            <script language='javascript' type='text/javascript'>
+              function check(input) {
+                if (input.value != document.getElementById('inputPassword').value) {
+                  input.setCustomValidity("Whoops, these don't match. Please make some change!");
+                } else {
+                  // input is valid -- reset the error message
+                  input.setCustomValidity('');
+                }
               }
-            }
-          </script>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Register</button>
-          </div>
-          <div class="form-group signin">
-            <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-          </div>
+            </script>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+            <div class="form-group signin">
+              <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+            </div>
 
     </form>
   </div>
-
-
 
 </body>
 
