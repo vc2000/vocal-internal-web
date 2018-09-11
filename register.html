@@ -69,46 +69,46 @@
           <input type="text" class="form-control" placeholder="First name"required>
           <br>
         </div>
-        <div class="col">
-          <label for="lname">Last name</label>
-          <input type="text" class="form-control" placeholder="Last name" required>
+          <div class="col">
+            <label for="lname">Last name</label>
+            <input type="text" class="form-control" placeholder="Last name" required>
         </div>
-      </div>
-      <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword" class="control-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-        <div class="help-block">We suggest your password should have minimum of 6 characters.</div>
-      </div>
-      <div class="form-group -sm-6">
-        <label for="ConfirmPassword">Re-enter Password</label>
-        <input type="password" class="form-control" id="inputPasswordConfirm"  placeholder="Confirm" oninput="check(this)" required>
-        <div class="help-block with-errors"></div>
-      </div>
-      <script language='javascript' type='text/javascript'>
-    function check(input) {
-        if (input.value != document.getElementById('inputPassword').value) {
-            input.setCustomValidity("Whoops, these don't match");
-        } else {
-            // input is valid -- reset the error message
-            input.setCustomValidity('');
-        }
-    }
-</script>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <div class="form-group signin">
-        <button type="submit" class="btn btn-primary">Register</button>
-      </div>
-      <div class="form-group signin">
-        <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-      </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="control-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+            <div class="help-block">We suggest your password should have minimum of 6 characters.</div>
+          </div>
+          <div class="form-group -sm-6">
+            <label for="ConfirmPassword">Re-enter Password</label>
+            <input type="password" class="form-control" id="inputPasswordConfirm"  placeholder="Confirm" oninput="check(this)" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <script language='javascript' type='text/javascript'>
+            function check(input) {
+              if (input.value != document.getElementById('inputPassword').value) {
+                input.setCustomValidity("Whoops, these don't match. Please make some change!");
+              } else {
+                // input is valid -- reset the error message
+                input.setCustomValidity('');
+              }
+            }
+          </script>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+          <div class="form-group signin">
+            <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+          </div>
 
     </form>
   </div>
