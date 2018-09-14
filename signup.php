@@ -11,23 +11,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//finding database
-$query = $conn -> query("SELECT * FROM user");
   //update
-  if(isset($_POST['Update'])){
-    $user=$_POST['user'];
-    $fname=$_POST['fname'];
-    $lname=$_POST['lname'];
-    $email=$_POST['email']
-    $password=$_POST['password']
-    $sql ="UPDATE OFFICES set user='$user', fname='$fname', lname= '$lname', email='$email',password='$password' WHERE user='$user';";
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$email=$_POST['email'];
+$job_titles_id=$_POST['job_titles_id'];
+$phone_num=$_POST['phone_num'];
+$password=$_POST['password'];
+$sql ="INSERT INTO user contacts (fname,lname,job_titles_id,email,password,phone_num ) VALUES ('$fname','$fname','$job_titles_id','$email','$password','$phone_num')"
 
-    if($conn->query($sql)){
-    echo "Success!";
-    }else {
-    "Error updating record " . $conn->error;
-    }
-  }
 
-  $conn->close();
+if($conn->query($sql) === false){
+trigger_error('Wrong SQL: '.$sql .'Error: '. $conn->error, E_USER_ERROR);
+echo "Success!";
+}else {
+"Error updating record " . $conn->error;
+}
+}
+
+$conn->close();
 ?>
