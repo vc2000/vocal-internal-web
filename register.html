@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,12 +21,11 @@
     <nav class="navbar navbar-expand-sm bg-light navbar-light navbar-fixed-bottom">
       <a class="navbar-brand" href="home.html"><img src="vocal-logo2.JPG" class="rounded" alt="Vocal logo" width="80" height="40"></a>
       <ul class="navbar-nav mr-auto">
-
         <li class="nav-item">
-          <a class="nav-link" href="event.html">Events</a>
+          <a class="nav-link" href="announcements.html">Announcements</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact_info.html">Employee Contact</a>
+          <a class="nav-link" href="event.html">Events</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,7 +42,7 @@
       </ul>
 
       <ul class="navbar-nav">
-        <button class="btn btn-success ml-auto"><a class="nav-link" href="Register.html">Register</a></button>
+        <button class="btn btn-success ml-auto"><a class="nav-link" href="register.html">Register</a></button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -63,31 +67,31 @@
   <div class="container">
     <h1>Register</h1>
     <br>
-    <form action="signup.php" data-toggle="validator" role="form" method="POST" >
+    <form action="signup.php" data-toggle="validator" role="form" method="POST">
       <div class="form-row">
         <div class="col">
           <label for="fname">First name</label>
-          <input type="text" class="form-control" placeholder="First name"required name="fname">
+          <input type="text" class="form-control" name="fname" placeholder="First name"required>
           <br>
         </div>
           <div class="col">
             <label for="lname">Last name</label>
-            <input type="text" class="form-control" placeholder="Last name" required name="lname">
+            <input type="text" class="form-control" name="lname" placeholder="Last name" required>
         </div>
           </div>
           <div class="form-row">
             <div class="col">
               <label for="phone_num">Phone number</label>
-              <input type="text" class="form-control" placeholder="Phone" required name="phone_num">
+              <input type="text" class="form-control" name="phone_num" placeholder="Phone" required>
           </div>
               <div class="col">
                 <label for="exampleFormControlSelect2">Job Titles</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2" required name="$job_title_id">
-        <option value="1">Data Scientist</option>
-        <option value="2">Software Engineer</option>
-        <option value="3">Sales Associate</option>
-        <option value="4">Project Manager</option>
-        <option value="5">Public Relations</option>
+                <select multiple class="form-control" id="exampleFormControlSelect2" name="job_title" required>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="Software Engineer">Software Engineer</option>
+        <option value="Sales Associate">Sales Associate</option>
+        <option value="Project Manager">Project Manager</option>
+        <option value="Public Relations">Public Relations</option>
       </select>
               </div>
             </div>
@@ -96,32 +100,32 @@
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
             </div>
-            <div class="form-group">
-              <label for="inputPassword" class="control-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword" placeholder="Password" required name="password">
-              <small id="suggestion" class="form-text text-muted">We suggest your password should have minimum of 6 characters.</small>
-            </div>
-            <div class="form-group -sm-6">
-              <label for="ConfirmPassword">Re-enter Password</label>
-              <input type="password" class="form-control" id="inputPasswordConfirm"  placeholder="Confirm" oninput="check(this)" required>
-              <div class="help-block with-errors"></div>
-            </div>
-            <script language='javascript' type='text/javascript'>
-              function check(input) {
-                if (input.value != document.getElementById('inputPassword').value) {
-                  input.setCustomValidity("Whoops, these don't match. Please make some change!");
-                } else {
-                  // input is valid -- reset the error message
-                  input.setCustomValidity('');
+              <div class="form-group">
+                <label for="inputPassword" class="control-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                <small id="suggestion" class="form-text text-muted">We suggest your password should have minimum of 6 characters.</small>
+              </div>
+              <div class="form-group -sm-6">
+                <label for="ConfirmPassword">Re-enter Password</label>
+                <input type="password" class="form-control" id="inputPasswordConfirm" name="password" placeholder="Confirm" oninput="check(this)" required>
+                <div class="help-block with-errors"></div>
+              </div>
+              <script language='javascript' type='text/javascript'>
+                function check(input) {
+                  if (input.value != document.getElementById('inputPassword').value) {
+                    input.setCustomValidity("Whoops, these don't match. Please make some change!");
+                  } else {
+                    // input is valid -- reset the error message
+                    input.setCustomValidity('');
+                  }
                 }
-              }
-            </script>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary">Register</button>
-            </div>
-            <div class="form-group signin">
-              <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-            </div>
+              </script>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+              <div class="form-group signin">
+                <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+              </div>
 
     </form>
   </div>

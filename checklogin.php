@@ -1,42 +1,39 @@
 <?php
 session_start();
-if (isset($_SESSION['email'])) {
-$email = $_SESSION['email'];
-}
-else {
-echo "<script type=text/javascript>location.href='checklogin.html'</script>";
-}
+  //Local variables
+  $host="localhost";
+ $username="venusc46_774hw1";
+ $password="user1";
+$dbname="venusc46_DS744HW1";
+
+//Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+  $email=($_POST['email']);
+  $password=($_POST['password']);
+
+  $sql="SELECT * FROM user WHERE email='$email' And password='$password'";
+  echo $result;
+  $result=$conn->query($sql);
+  $count=$result->num_rows;
+
+
+
+   if($result->num_rows == 1) {
+   // session_register(myusername);
+$_SESSION['email']="$email"; //assign session
+ // $_SESSION[$myusername] = $myusername;
+    header("location:contact_info.php");
+  }
+
+  else{
+   header("location:wrongName.php");
+   $_SESSION['myusername']="";
+  }
+
 
 ?>
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-<head>
-
-  <title>Login successful</title>
-
-
-</head>
-
-<body style="background-color: burlywood">
-
-
-
-	      Welcome<b>
-
-	      <?php
-
-		echo $_SESSION['email'];
-
-	      ?>
-
-
-
-</body>
-
-</html>

@@ -56,36 +56,56 @@
       </ul>
     </nav>
   </div>
-
-
-
-  <br>
-  <br>
-
-
-
   <div class="container">
-    <h2>Login</h2>
-    <form data-toggle="validator" role="form" method="POST" action="checklogin.php">
-      <div class="form-group">
-        <label for="Email1">Email address</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-      </div>
-        <div class="form-group">
-          <label for="Password">Password</label>
-          <input type="password"name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-      </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Remember Me.</label>
-          </div>
-          <!-- <button type="submit" class="btn btn-primary">Login</button> -->
-          <input class="btn btn-primary" name="submit" type="submit" value="Login"/>
-    </form>
-        </div>
-
-
-
+    <center><h1>Update Employee Information</h1></center>
+    
+<form name="update" method="post" action="edit.php" target="message" data-toggle="validator">
+	  <div class="form-row">
+	    <div class="col">
+         	 <label for="id">ID</label>
+          	<input type="int" class="form-control" name="id" placeholder="ID"required>
+          <br>
+            </div>
+            <div class="col">
+         	 <label for="fname">First name</label>
+        	 <input type="text" class="form-control" name="fname" placeholder="First name">
+          <br>
+            </div>
+            <div class="col">
+         	 <label for="lname">Last name</label>
+        	 <input type="text" class="form-control" name="lname" placeholder="Last name">
+          <br>
+            </div>
+           </div>
+            
+            
+           <div class="form-row">
+           	<div class="col">
+                <label for="exampleFormControlSelect2">Job Titles</label>
+               	      <select multiple class="form-control" id="exampleFormControlSelect2" name="job_title" required>
+		        <option value="Data Scientist">Data Scientist</option>
+		        <option value="Software Engineer">Software Engineer</option>
+		        <option value="Sales Associate">Sales Associate</option>
+		        <option value="Project Manager">Project Manager</option>
+		        <option value="Public Relations">Public Relations</option>
+		      </select>
+                 </div>
+            <div class="col">
+              <label for="phone_num">Phone number</label>
+              <input type="text" class="form-control" name="phone_num" placeholder="Phone" required>
+            </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" name="Update" value="Update">Update</button>
+              <p>Back to <a href="contact_info.php" target="_parent"> the data</a>.</p>
+            </div>
+	    
+	    
+  </div>
 
 </body>
 

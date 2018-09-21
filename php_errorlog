@@ -1,0 +1,87 @@
+[14-Sep-2018 08:39:16 CST6CDT] PHP Parse error:  syntax error, unexpected '$password' (T_VARIABLE) in /home/venusc46/public_html/DS774/signup.php on line 22
+[14-Sep-2018 09:37:08 CST6CDT] PHP Parse error:  syntax error, unexpected 'Success' (T_STRING) in /home/venusc46/public_html/DS774/signup.php on line 26
+[14-Sep-2018 09:42:46 CST6CDT] PHP Parse error:  syntax error, unexpected 'Success' (T_STRING) in /home/venusc46/public_html/DS774/signup.php on line 27
+[14-Sep-2018 09:43:32 CST6CDT] PHP Parse error:  syntax error, unexpected 'Success' (T_STRING) in /home/venusc46/public_html/DS774/signup.php on line 27
+[14-Sep-2018 09:43:56 CST6CDT] PHP Parse error:  syntax error, unexpected 'Success' (T_STRING) in /home/venusc46/public_html/DS774/signup.php on line 27
+[14-Sep-2018 09:45:44 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 25
+[14-Sep-2018 09:47:58 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 25
+[14-Sep-2018 09:49:22 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 25
+[14-Sep-2018 09:49:39 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 25
+[14-Sep-2018 09:50:21 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 24
+[18-Sep-2018 16:33:39 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 24
+[18-Sep-2018 16:37:13 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 24
+[18-Sep-2018 16:37:24 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 24
+[18-Sep-2018 16:38:12 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/venusc46/public_html/DS774/signup.php on line 24
+[18-Sep-2018 16:39:49 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/venusc46/public_html/DS774/signup.php on line 30
+[18-Sep-2018 16:50:07 CST6CDT] PHP Parse error:  syntax error, unexpected '<' in /home/venusc46/public_html/DS774/signup.php on line 28
+[18-Sep-2018 16:50:49 CST6CDT] PHP Parse error:  syntax error, unexpected '<' in /home/venusc46/public_html/DS774/signup.php on line 29
+[20-Sep-2018 16:26:11 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/venusc46/public_html/DS774/try.php on line 87
+[20-Sep-2018 16:44:35 CST6CDT] PHP Parse error:  syntax error, unexpected '>' in /home/venusc46/public_html/DS774/try.php on line 92
+[20-Sep-2018 17:43:18 CST6CDT] PHP Parse error:  syntax error, unexpected 'edit' (T_STRING), expecting ',' or ';' in /home/venusc46/public_html/DS774/contact_info.php on line 122
+[20-Sep-2018 21:20:07 CST6CDT] PHP Parse error:  syntax error, unexpected 'id' (T_STRING), expecting ',' or ';' in /home/venusc46/public_html/DS774/contact_info.php on line 124
+[20-Sep-2018 21:21:33 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/venusc46/public_html/DS774/contact_info.php:100
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/contact_info.php on line 100
+[20-Sep-2018 21:22:32 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/venusc46/public_html/DS774/contact_info.php:100
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/contact_info.php on line 100
+[20-Sep-2018 21:23:55 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/venusc46/public_html/DS774/contact_info.php:95
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/contact_info.php on line 95
+[20-Sep-2018 21:52:58 CST6CDT] PHP Fatal error:  Wrong SQL: INSERT INTO user (fname,lname,job_titles_id,email,password,phone_num ) VALUES ('Chit','Thant','Data Scientist','chit@mail.com','1','6038580222')Error: Unknown column 'job_titles_id' in 'field list' in /home/venusc46/public_html/DS774/signup.php on line 25
+[20-Sep-2018 21:53:36 CST6CDT] PHP Fatal error:  Wrong SQL: INSERT INTO user (fname,lname,job_title,email,password,phone_num ) VALUES ('Chit','Thant','Data Scientist','chit@mail.com','1','6038580222')Error: Unknown column 'password' in 'field list' in /home/venusc46/public_html/DS774/signup.php on line 25
+[20-Sep-2018 21:57:31 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/venusc46/public_html/DS774/signup.php on line 31
+[20-Sep-2018 22:55:59 CST6CDT] PHP Parse error:  syntax error, unexpected '"good"' (T_CONSTANT_ENCAPSED_STRING) in /home/venusc46/public_html/DS774/delete.php on line 9
+[20-Sep-2018 23:07:18 CST6CDT] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR) in /home/venusc46/public_html/DS774/edit.php on line 13
+[20-Sep-2018 23:07:48 CST6CDT] PHP Parse error:  syntax error, unexpected 'or' (T_LOGICAL_OR) in /home/venusc46/public_html/DS774/edit.php on line 13
+[20-Sep-2018 23:19:32 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/delete.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/delete.php on line 8
+[20-Sep-2018 23:19:55 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/delete.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/delete.php on line 8
+[20-Sep-2018 23:33:28 CST6CDT] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR) in /home/venusc46/public_html/DS774/edit.php on line 20
+[20-Sep-2018 23:34:53 CST6CDT] PHP Parse error:  syntax error, unexpected 'or' (T_LOGICAL_OR) in /home/venusc46/public_html/DS774/edit.php on line 20
+[20-Sep-2018 23:39:04 CST6CDT] PHP Parse error:  syntax error, unexpected 'addd' (T_STRING), expecting ',' or ')' in /home/venusc46/public_html/DS774/edit.php on line 19
+[20-Sep-2018 23:40:16 CST6CDT] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/venusc46/public_html/DS774/edit.php on line 22
+[20-Sep-2018 23:44:11 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 25
+[20-Sep-2018 23:44:56 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 25
+[20-Sep-2018 23:46:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 25
+[20-Sep-2018 23:47:02 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 25
+[20-Sep-2018 23:49:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 25
+[21-Sep-2018 09:19:14 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 43
+[21-Sep-2018 09:23:49 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/venusc46/public_html/DS774/edit.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/venusc46/public_html/DS774/edit.php on line 43
+[21-Sep-2018 11:33:32 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/venusc46/public_html/DS774/edit.php on line 34
+[21-Sep-2018 11:33:59 CST6CDT] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/venusc46/public_html/DS774/edit.php on line 33
+[21-Sep-2018 11:35:06 CST6CDT] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/venusc46/public_html/DS774/edit.php on line 33
+[21-Sep-2018 11:35:12 CST6CDT] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/venusc46/public_html/DS774/edit.php on line 33
+[21-Sep-2018 11:51:09 CST6CDT] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/venusc46/public_html/DS774/edit.php on line 17
+[21-Sep-2018 12:03:21 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/venusc46/public_html/DS774/edit.php on line 32
+[21-Sep-2018 12:04:57 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/venusc46/public_html/DS774/edit.php on line 36
+[21-Sep-2018 12:05:23 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/venusc46/public_html/DS774/edit.php on line 36

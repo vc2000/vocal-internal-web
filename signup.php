@@ -15,18 +15,19 @@ if ($conn->connect_error) {
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $email=$_POST['email'];
-$job_titles_id=$_POST['job_titles_id'];
+$job_title=$_POST['job_title'];
 $phone_num=$_POST['phone_num'];
 $password=$_POST['password'];
-$sql ="INSERT INTO user contacts (fname,lname,job_titles_id,email,password,phone_num ) VALUES ('$fname','$fname','$job_titles_id','$email','$password','$phone_num')"
+$sql ="INSERT INTO user (fname,lname,job_title,email,password,phone_num ) VALUES ('$fname','$lname','$job_title','$email','$password','$phone_num')";
 
 
 if($conn->query($sql) === false){
 trigger_error('Wrong SQL: '.$sql .'Error: '. $conn->error, E_USER_ERROR);
 echo "Success!";
 }else {
-"Error updating record " . $conn->error;
-}
+
+echo"<center><h1>Welcome to join Vocal</h1></center>";
+echo"<center><h1><a href='home.html'>Home<a></h1></center>";
 }
 
 $conn->close();
