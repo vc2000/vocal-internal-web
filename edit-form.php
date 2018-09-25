@@ -1,6 +1,26 @@
 <?php
-  session_start();
-  session_destroy();
+require('db.php');
+$id=$_REQUEST['id'];
+$query ="SELECT * from user where id ='".$id."'";
+$result = mysqli_query($conn, $query) or die(mysqli_error());
+$row = mysqli_fetch_assoc($result);
+
+$status = "";
+if(isset($_POST['new']) && $_POST['new']==1)
+{
+$id=$_REQUEST['id'];
+$fname=$_REQUEST['fname'];
+$lname=$_REQUEST['lname'];
+$job_title=$_REQUEST['job_title'];
+$email=$_REQUEST['email'];
+$phone_num=$_REQUEST['phone_num'];
+
+$update="update user set fname='".$fname."', lname='".$lname."', phone_num='".$phone_num."',email='".$email."',job_title='".$job_title."' WHERE id='$id';";
+mysqli_query($conn,$update) or die(mysqli_error());
+$status = "GOOD !  <a href='contact_info.php'>data</a>";
+echo "$status";
+}else{
+
 ?>
 
 <!DOCTYPE html>
@@ -59,21 +79,24 @@
   <div class="container">
     <center><h1>Update Employee Information</h1></center>
     
-<form name="update" method="post" action="edit.php" target="message" data-toggle="validator">
-	  <div class="form-row">
-	    <div class="col">
-         	 <label for="id">ID</label>
-          	<input type="int" class="form-control" name="id" placeholder="ID"required>
+<form name="update" method="post" action="" data-toggle="validator">
+		<div class ="form-row">
+		<div class="col">
+	    	<center><h3>ID : <?php echo $row['id'];?></h3></center>
+          	<input type="hidden" class="form-control" name="new" value="1"/>
           <br>
             </div>
+		</div>
+	  <div class="form-row">
+
             <div class="col">
          	 <label for="fname">First name</label>
-        	 <input type="text" class="form-control" name="fname" placeholder="First name">
+        	 <input type="text" class="form-control" name="fname" placeholder="First name" value="<?php echo $row['fname'];?>">
           <br>
             </div>
             <div class="col">
          	 <label for="lname">Last name</label>
-        	 <input type="text" class="form-control" name="lname" placeholder="Last name">
+        	 <input type="text" class="form-control" name="lname" placeholder="Last name" value="<?php echo $row['lname'];?>">
           <br>
             </div>
            </div>
@@ -81,7 +104,7 @@
             
            <div class="form-row">
            	<div class="col">
-                <label for="exampleFormControlSelect2">Job Titles</label>
+                <label for="job_title">Job Titles</label>
                	      <select multiple class="form-control" id="exampleFormControlSelect2" name="job_title" required>
 		        <option value="Data Scientist">Data Scientist</option>
 		        <option value="Software Engineer">Software Engineer</option>
@@ -92,19 +115,22 @@
                  </div>
             <div class="col">
               <label for="phone_num">Phone number</label>
-              <input type="text" class="form-control" name="phone_num" placeholder="Phone" required>
+              <input type="text" class="form-control" name="phone_num" placeholder="Phone" value="<?php echo $row['phone_num'];?>">
             </div>
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+              <label for="Email">Email address</label>
+              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email" name="email" value="<?php echo $row['email'];?>">
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary" name="Update" value="Update">Update</button>
               <p>Back to <a href="contact_info.php" target="_parent"> the data</a>.</p>
             </div>
 	    
-	    
+	</form>
+	<?php
+	}
+	?>
   </div>
 
 </body>
